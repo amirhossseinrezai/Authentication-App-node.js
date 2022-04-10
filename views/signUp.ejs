@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>login page</title>
+    <link rel="stylesheet" href="../public/css/bootstrap-v4.css">
+    <script src="../public/js/jquery-3.6.0.min.js"></script>
+    <script src="../public/js/bootstrap-v4.js"></script>
+</head>
+<body class="h-100 min-vh-100 d-flex justify-content-center align-items-center">
+    <%- include('../includes/header.ejs'); -%>
+    <div class="container h-100 w-100 d-flex justify-content-center align-items-center mt-5">
+        <div id="cardlogin" class="card w-50 d-flex justify-content-center align-items-center shadow-lg" style=" background-color: rgb(247, 247, 247); transition: cubic-bezier() 2s;">
+            <div class="card-body d-block w-75 mx-auto">
+                <%- include('../views/messages.ejs'); -%>
+                <h2 style="text-align: center; margin-bottom: 8%;">Sign Up</h2>
+                <form action="/signUp" method="post">
+                    <div class="form-group ">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username...">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email...">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password...">
+                    </div>
+                    <div class="form-group d-block">
+                        <button type="submit" class="btn btn-primary w-100">Sign up</button>
+                        <a href="/login" class="page-link text-center mt-3">Back To Login Page</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

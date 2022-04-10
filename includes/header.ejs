@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb-5">
+    <div class="container-fluid">
+        <a href="/login" class="navbar-brand">Auth App</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <% if(currentUser){ %>
+                    <li class="nav-item"><a href="/dashboard" class="nav-link"><%= currentUser.username %></a></li>
+                    <li class="nav-item"><a href="/changePassword" class="nav-link">Password Change</a></li>
+                    <li class="nav-item"><a href="/logOut" class="nav-link">Log out</a></li>
+                <%} else {%>
+                    <li class="nav-item"><a href="/login" class="nav-link">Log in</a></li>
+                    <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="/signUp" class="nav-link">Sign up</a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</nav>
